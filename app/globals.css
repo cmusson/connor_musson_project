@@ -10,18 +10,43 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    background-color: #0d1117;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #acb8c4;
+  background-image: radial-gradient(
+      circle farthest-corner at -25% -50%,
+      #0d1117 36%,
+      rgba(13, 17, 23, 0) 48%
+    ),
+    radial-gradient(
+      circle farthest-corner at -25% 150%,
+      #0d1117 45%,
+      rgba(13, 17, 23, 0) 89%
+    ),
+    radial-gradient(
+      circle farthest-corner at -25% -100%,
+      rgba(13, 17, 23, 0) 55%,
+      rgba(13, 17, 23, 0.28) 65%,
+      rgba(13, 17, 23, 0) 68%
+    ),
+    radial-gradient(
+      circle farthest-corner at -33% -75%,
+      #1f00cc 48%,
+      rgba(131, 5, 49, 0) 56%
+    ),
+    radial-gradient(
+      circle farthest-side at 0 -50%,
+      rgba(13, 17, 23, 0) 64%,
+      rgba(1, 2, 36, 0.4) 69%,
+      rgba(13, 17, 23, 0) 81%
+    ),
+    radial-gradient(
+      circle farthest-corner at 0 -50%,
+      rgba(13, 17, 23, 0) 33%,
+      #010c5f 51%,
+      rgba(13, 17, 23, 0) 72%
+    );
 }
