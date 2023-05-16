@@ -1,17 +1,26 @@
-import React from "react";
+import { IQuote } from "@/typings";
 import Quote from "./Quote";
 
-const QuoteList = () => {
+interface IQuoteListProps {
+  quotes: IQuote[];
+  page: "movie" | "character";
+}
+
+const QuoteList = ({ quotes, page }: IQuoteListProps) => {
   return (
-    <div>
-      <p>Quotes from [selected movie]</p>
-      <Quote />
-      <Quote />
-      <Quote />
-      <Quote />
-      <Quote />
-      <Quote />
-    </div>
+    <section
+      className={`${
+        page === "movie" ? "h-80" : "h-96"
+      } overflow-y-auto flex flex-col align-center gap-2 bg-info-gry p-2 rounded-lg `}
+    >
+      {quotes.map((quote: any, i) => (
+        <Quote
+          key={`${quote._id}-${i}`}
+          quote={quote}
+          character={page === "character" ? true : false}
+        />
+      ))}
+    </section>
   );
 };
 
