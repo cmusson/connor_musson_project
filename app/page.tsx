@@ -1,23 +1,33 @@
-import Button from "./Button";
 import MovieInfo from "./MovieInfo";
-import QuoteList from "./QuoteList";
-
-const fetchMovieInfo = async () => {};
+import { fetchMovieInfo } from "./Api/fetchData";
+import MovieCard from "./MovieCard";
 
 export default async function Home() {
-  const movieInfo = await fetchMovieInfo();
+  const movieInfo = await fetchMovieInfo("5cd95395de30eff6ebccde56");
+
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <section className="flex">
-        <Button>Fellowship of the Ring</Button>
-        <Button>Twin Towers</Button>
-        <Button>Return of the King</Button>
-      </section>
-      <section>
-        <MovieInfo />
-      </section>
-      <section>
-        <QuoteList />
+    <main className="flex min-h-screen flex-col items-center p-4 gap-2">
+      <MovieInfo movieInfo={movieInfo} landingPage={true} />
+
+      <section className="flex gap-6 flex-col tablet:flex-row">
+        <MovieCard
+          title={"Fellowship of the Ring"}
+          img={"Fellowship"}
+          width={225}
+          height={350}
+        />
+        <MovieCard
+          title={"The Two Towers"}
+          img={"TwoTowers"}
+          width={225}
+          height={350}
+        />
+        <MovieCard
+          title={"The Return of The King"}
+          img={"ReturnOfTheKing"}
+          width={225}
+          height={350}
+        />
       </section>
     </main>
   );

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 interface IButtonProps {
-  children: string;
+  children: ReactNode;
 }
 
 const Button = ({ children }: IButtonProps) => {
-  return <button className="m-4">{children}</button>;
+  return (
+    <button className="bg-blue-700 p-2 px-4 rounded-full hover:opacity-50 text-xs tablet:text-base">
+      {children}
+    </button>
+  );
 };
 
 export default Button;
