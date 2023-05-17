@@ -11,7 +11,7 @@ const QuoteList = ({ quotes, page }: IQuoteListProps) => {
     <section
       className={`${
         page === "movie" ? "h-80" : "h-96"
-      } overflow-y-auto flex flex-col align-center gap-2 bg-info-gry p-2 rounded-lg `}
+      } overflow-y-auto flex flex-col align-center gap-2 bg-info-gry p-2 rounded-lg mt-2`}
     >
       {quotes.map((quote: any, i) => (
         <Quote
