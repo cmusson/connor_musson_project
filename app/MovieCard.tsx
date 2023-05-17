@@ -15,7 +15,7 @@ const MovieCard = ({ title, img, width, height }: IMovieCardProps) => {
       <Button>
         <Link href={`movie/${img}`}>{title}</Link>
       </Button>
-      <Link href={`movie/${img}`}>
+      <Link href={`movie/${img}`} className="flex justify-center ">
         <MoviePoster width={width} height={height} movie={img} />
       </Link>
     </div>
