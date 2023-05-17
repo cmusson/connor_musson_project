@@ -25,12 +25,15 @@ const Quote = async ({ quote, character }: IQuoteProps) => {
   return (
     <div className="flex flex-col">
       <div className="flex gap-2 w-68 m-2">
-        <p>
+        <p className="font-display text-xs">
           {`${dialog}${character ? "" : " - "}`}
           {character ? (
             <></>
           ) : (
-            <Link href={link} className="hover:underline font-style: italic">
+            <Link
+              href={link}
+              className="hover:underline font-sans font-style: italic"
+            >
               {findNameById(quote.character, characters)}
             </Link>
           )}

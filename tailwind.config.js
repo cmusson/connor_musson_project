@@ -10,6 +10,9 @@ module.exports = {
       tablet: "700px",
     },
     extend: {
+      fontFamily: {
+        display: ["var(--font-lotrFont)"],
+      },
       colors: {
         "info-gry": "rgb(20,27,33)",
       },

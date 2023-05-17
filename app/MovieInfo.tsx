@@ -9,11 +9,15 @@ interface IMovieInfoProps {
 const MovieInfo = ({ movieInfo, landingPage, moviePage }: IMovieInfoProps) => {
   return (
     <section className="flex flex-col align-center">
-      <h1 className={`${moviePage ? "text-left" : "text-center"} text-xl`}>
+      <h1
+        className={`${
+          moviePage ? "text-left" : "text-center"
+        } text-md tabley:text-xl font-display`}
+      >
         {movieInfo.name}
       </h1>
       {landingPage ? (
-        <h2 className="text-center text-sm pb-1">
+        <h2 className="text-center text-sm pb-1 ">
           Find all the information below
         </h2>
       ) : (
