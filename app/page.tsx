@@ -6,7 +6,7 @@ export default async function Home() {
   const movieInfo = await fetchMovieInfo("5cd95395de30eff6ebccde56");
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-4 gap-2">
+    <main className="flex min-h-screen flex-col items-center p-4 gap-4">
       <MovieInfo movieInfo={movieInfo} landingPage={true} />
 
       <section className="flex gap-6 flex-col tablet:flex-row">
