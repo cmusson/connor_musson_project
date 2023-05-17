@@ -22,7 +22,7 @@ const CharacterPage = async ({ params: { character } }: PageProps) => {
   return (
     <main className="p-4 gap-2">
       <section className="flex flex-col align-center gap-2">
-        <h1 className="text-xl text-center font-display">
+        <h1 className="text-xl text-center font-display mb-1">
           {<div>{infoCheck(characterInfo.name)}</div>}
         </h1>
         <div className="flex gap-2 justify-center">

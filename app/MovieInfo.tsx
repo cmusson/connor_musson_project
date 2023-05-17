@@ -11,7 +11,7 @@ const MovieInfo = ({ movieInfo, landingPage, moviePage }: IMovieInfoProps) => {
     <section className="flex flex-col align-center">
       <h1
         className={`${
-          moviePage ? "text-left" : "text-center"
+          moviePage ? "text-left mb-2" : "text-center"
         } text-md tabley:text-xl font-display`}
       >
         {movieInfo.name}
