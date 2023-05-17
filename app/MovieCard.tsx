@@ -11,7 +11,7 @@ interface IMovieCardProps {
 
 const MovieCard = ({ title, img, width, height }: IMovieCardProps) => {
   return (
-    <div className="flex align-center flex-col gap-2">
+    <div className="flex align-center flex-col gap-4">
       <Button>
         <Link href={`movie/${img}`}>{title}</Link>
       </Button>
